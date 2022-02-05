@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&family=Lobster&display=swap');
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-image: url("world.png");
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    width: 580px;
+    height: 60px;
+    justify-content: center;
+    text-align: center;
+    color: #00ff04;
+    font-family: 'Lobster', cursive;
+    border: 4px dotted red;
+    border-radius: 20px;
+    background: rgba(128, 128, 128);
+    font-size: 45px;
+}
+
+#all{
+    display: flex;
+    height: 600px;
+    width: 600px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    perspective: 1000px;
+}
+
+.card {
+    transform-style: preserve-3d;
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    padding: 10px;
+    justify-content: space-around;
+    position: relative;
+    transition: all 1s linear;
+}
+.front,.back{
+    display: flex;
+    background: rgb(241, 166, 166);
+    font-family: 'Jost', sans-serif;
+    font-size: 20px;
+    height: 160px;
+    width: 160px;
+    border: 2px solid rgb(234, 101, 101);
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    position: absolute;
+}
+.front{
+    z-index: 2;
+    backface-visibility: hidden;
+}
+.back{
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+
+
+
